@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Editor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #container{
+      display:grid;
+      grid-template-columns: auto auto;
+
+    }
+    #svg-container {
+      top: 0;
+      width: max-content;
+      border:1px solid red;
+      overflow: hidden;
+      background-color: rgb(200, 200, 200);
+    }
+    #table
+    {
+      width:400px;
+      height:600px;
+      overflow-y:scroll;
+    }
+    table {
+      border-collapse: collapse;
+      width: 400px;
+     
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+    }
+    input{
+      border:hidden;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    #alleditorComponent
+    {
+      position: relative;
+    }
+   #svgPaletteContainer
+   {
+    position:absolute;
+    top:10px;
+   left:300px;
+  
+   }
+  
+  </style>
+<script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+<script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="alleditorComponent">
+      <!-- <object type="image/svg+xml" data="india2states.svg" id="svg-container" ></object> -->
+      <div id="svg-container">
+
+      </div>
+      <div id="svgPaletteContainer">
+        <svg id="color-palette" xmlns="http://www.w3.org/2000/svg" width="220" height="50"  ></svg>
+      </div>
+
+    </div>
+    <div id="table">
+      <table>
+        <thead>
+          <tr>
+            <th>State/UT</th>
+            <th>Population (in millions)</th>
+          </tr>
+        </thead>
+        <tbody id="stateUTTableBody">
+         
+        </table>
+    </div>
+    <button id="button">publish</button>
+  </div> 
+  <script src="index.js">
+
+  
+  </script>
+ 
+</body>
+</html>
